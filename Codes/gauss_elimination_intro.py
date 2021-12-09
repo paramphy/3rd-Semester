@@ -1,25 +1,17 @@
-
 # Importing NumPy Library
 import numpy as np
 import sys
-
-# Reading number of unknowns
-n = int(input('Enter number of unknowns: '))
-
+n = 3
 # Making numpy array of n x n+1 size and initializing 
 # to zero for storing augmented matrix
-a = np.zeros((n,n+1))
+a = np.array([[3.0,2.0,1.0,11.0],[2.0,3.0,1.0,13.0],[1.0,1.0,4.0,12.0]])
 
 # Making numpy array of n size and initializing 
 # to zero for storing solution vector
 x = np.zeros(n)
 
-# Reading augmented matrix coefficients
-print('Enter Augmented Matrix Coefficients:')
-for i in range(n):
-    for j in range(n+1):
-        a[i][j] = float(input( 'a['+str(i)+']['+ str(j)+']='))
 print(a)
+print(x)
 # Applying Gauss Elimination
 for i in range(n):
     if a[i][i] == 0.0:
